@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F43F33"
+    tools:context=".Task2.Fragments.GameResFragment">
+
+
+    <TextView
+        android:id="@+id/tvGName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Dice"
+        android:textSize="40dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:background="#FF5722"
+        app:constraint_referenced_ids="tvName1, tvRes1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGName" />
+
+    <TextView
+        android:id="@+id/tvName1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Name 1"
+        style="@style/Styletv"
+        app:layout_constraintStart_toStartOf="@id/flow1"
+        app:layout_constraintTop_toTopOf="@id/flow1"
+        app:layout_constraintBottom_toTopOf="@id/flow1"
+        app:layout_constraintEnd_toStartOf="@id/tvRes1"/>
+
+    <TextView
+        android:id="@+id/tvRes1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Res 1"
+        style="@style/Styletv"
+        app:layout_constraintStart_toEndOf="@id/tvName1"
+        app:layout_constraintTop_toTopOf="@id/flow1"
+        app:layout_constraintEnd_toEndOf="@id/flow1"
+        app:layout_constraintBottom_toBottomOf="@id/flow1"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:background="#FF5722"
+        app:constraint_referenced_ids="tvName2, tvRes2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flow1" />
+
+    <TextView
+        android:id="@+id/tvName2"
+        android:layout_width="0dp"
+        tools:text="Name 2"
+        style="@style/Styletv"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/flow2"
+        app:layout_constraintTop_toTopOf="@id/flow2"
+        app:layout_constraintBottom_toBottomOf="@id/flow2"
+        app:layout_constraintEnd_toStartOf="@id/tvRes2"/>
+
+    <TextView
+        android:id="@+id/tvRes2"
+        android:layout_width="0dp"
+        tools:text="Res 2"
+        style="@style/Styletv"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvName2"
+        app:layout_constraintEnd_toEndOf="@id/flow2"
+        app:layout_constraintTop_toTopOf="@id/flow2"
+        app:layout_constraintBottom_toBottomOf="@id/flow2"/>
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flowBottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="btnExitRes, btnMoreRes, btnAgain"
+        android:background="#FF1D00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/btnExitRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:autoSizeTextType="uniform"
+        style="@style/StyleBtn"
+        app:layout_constraintStart_toStartOf="@id/flowBottom"
+        app:layout_constraintTop_toTopOf="@id/flowBottom"
+        app:layout_constraintEnd_toStartOf="@id/btnMoreRes"
+        app:layout_constraintBottom_toBottomOf="@id/flowBottom"
+        />
+
+    <Button
+        android:id="@+id/btnMoreRes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/StyleBtn"
+        android:text="More"
+        app:layout_constraintTop_toTopOf="@id/flowBottom"
+        app:layout_constraintStart_toEndOf="@id/btnExitRes"
+        app:layout_constraintEnd_toStartOf="@id/btnAgain"
+        app:layout_constraintBottom_toBottomOf="@id/flowBottom"/>
+
+    <Button
+        android:id="@+id/btnAgain"
+        android:layout_width="0dp"
+        style="@style/StyleBtn"
+        android:text="again"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnMoreRes"
+        app:layout_constraintEnd_toEndOf="@id/flowBottom"
+        app:layout_constraintTop_toTopOf="@id/flowBottom"
+        app:layout_constraintBottom_toBottomOf="@id/flowBottom"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

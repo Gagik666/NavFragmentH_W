@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.fragmenthomeworks.Task2.Fragments.MainFragment"
+        android:label="fragment_main2"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.fragmenthomeworks.Task1.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.fragmenthomeworks.Task1.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="result"
+            app:argType="string"
+            android:defaultValue="Hello, Android" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.example.fragmenthomeworks.Task2.Fragments.GamesFragment"
+        android:label="fragment_games"
+        tools:layout="@layout/fragment_games" >
+        <action
+            android:id="@+id/action_gamesFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_gamesFragment_to_diceFragment"
+            app:destination="@id/diceFragment" />
+        <action
+            android:id="@+id/action_gamesFragment_to_ticTacToeFragment"
+            app:destination="@id/ticTacToeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.example.fragmenthomeworks.Task2.Fragments.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" />
+    <fragment
+        android:id="@+id/diceFragment"
+        android:name="com.example.fragmenthomeworks.Task2.Fragments.DiceFragment"
+        android:label="fragment_dice"
+        tools:layout="@layout/fragment_dice" >
+        <action
+            android:id="@+id/action_diceFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <argument
+            android:name="player1"
+            app:argType="string"
+            android:defaultValue="Name1"/>
+        <argument
+            android:name="player2"
+            app:argType="string"
+            android:defaultValue="Name2"/>
+        <action
+            android:id="@+id/action_diceFragment_to_gameRes"
+            app:destination="@id/gameRes" />
+        <action
+            android:id="@+id/action_diceFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameRes"
+        android:name="com.example.fragmenthomeworks.Task2.Fragments.GameResFragment"
+        android:label="fragment_game_res"
+        tools:layout="@layout/fragment_game_res" >
+        <argument
+            android:name="n1"
+            app:argType="string"
+            android:defaultValue="Name1" />
+        <argument
+            android:name="n2"
+            app:argType="string"
+            android:defaultValue="Name2" />
+        <argument
+            android:name="r1"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="r2"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="gName"
+            app:argType="string"
+            android:defaultValue="Gname" />
+        <action
+            android:id="@+id/action_gameRes_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_gameRes_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_gameRes_to_diceFragment2"
+            app:destination="@id/diceFragment" />
+        <action
+            android:id="@+id/action_gameRes_to_ticTacToeFragment"
+            app:destination="@id/ticTacToeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticTacToeFragment"
+        android:name="com.example.fragmenthomeworks.Task2.Fragments.TicTacToeFragment"
+        android:label="fragment_tic_tac_toe"
+        tools:layout="@layout/fragment_tic_tac_toe" >
+        <action
+            android:id="@+id/action_ticTacToeFragment_to_gameRes"
+            app:destination="@id/gameRes" />
+        <action
+            android:id="@+id/action_ticTacToeFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_ticTacToeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="name1"
+            app:argType="string"
+            android:defaultValue="Name 1" />
+        <argument
+            android:name="name2"
+            android:defaultValue="Name 2" />
+    </fragment>
+</navigation>

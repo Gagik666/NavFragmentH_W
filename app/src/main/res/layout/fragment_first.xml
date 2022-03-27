@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#F43F33"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Task1.FirstFragment">
+
+    <EditText
+        android:id="@+id/edInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:hint="@string/enter_some_text"
+        android:paddingStart="15dp"
+        android:textColor="@color/yelow"
+        android:textColorHint="#303030"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvexit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#040404"
+        android:elevation="8dp"
+        app:cardCornerRadius="200dp"
+        app:strokeColor="#AEF6EBE4"
+        app:strokeWidth="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cvGoTo"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/e_x_i_t"
+            android:textStyle="bold"
+            android:backgroundTint="#731605" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvGoTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#040404"
+        android:elevation="8dp"
+        app:cardCornerRadius="200dp"
+        app:strokeColor="#AEF6EBE4"
+        app:strokeWidth="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cvexit"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <Button
+            android:id="@+id/btnGoTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to"
+            android:textStyle="bold"
+            android:backgroundTint="#731605" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

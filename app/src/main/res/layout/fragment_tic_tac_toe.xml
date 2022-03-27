@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Task2.Fragments.TicTacToeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F43F33"
+        tools:context=".SecondHomeWork2">
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flowNameP1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="tvNP1, tvRP1"
+            app:layout_constraintEnd_toStartOf="@id/tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNP1"
+            style="@style/StyleTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Name 1"
+            android:textColor="#339537"
+            app:layout_constraintBottom_toBottomOf="@+id/flowNameP1"
+            app:layout_constraintEnd_toStartOf="@id/tvRP1"
+            app:layout_constraintStart_toStartOf="@id/flowNameP1"
+            app:layout_constraintTop_toTopOf="@id/flowNameP1" />
+
+        <TextView
+            android:id="@+id/tvRP1"
+            style="@style/StyleTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#339537"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/flowNameP1"
+            app:layout_constraintEnd_toEndOf="@id/flowNameP1"
+            app:layout_constraintStart_toEndOf="@id/tvNP1"
+            app:layout_constraintTop_toTopOf="@id/flowNameP1" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flowNameP2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="tvRP2, tvNP2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvRP2"
+            style="@style/StyleTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/flowNameP2"
+            app:layout_constraintStart_toStartOf="@id/flowNameP2"
+            app:layout_constraintTop_toTopOf="@id/flowNameP2" />
+
+        <TextView
+            android:id="@+id/tvNP2"
+            style="@style/StyleTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Name 2"
+            app:layout_constraintBottom_toBottomOf="@+id/flowNameP2"
+
+            app:layout_constraintEnd_toEndOf="@id/flowNameP2"
+            app:layout_constraintTop_toTopOf="@id/flowNameP2" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/tc_tac_toe"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPlayer"
+            style="@style/StyleTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/tv"
+            app:layout_constraintStart_toStartOf="@id/tv"
+            app:layout_constraintTop_toBottomOf="@id/tv" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.12" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flowContainerD"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            app:constraint_referenced_ids="flowRow1, tv3, flowRow2, tv6, flowRow3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline1" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flowRow1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="btn1, tv1, btn2, tv2, btn3"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow1"
+            app:layout_constraintEnd_toEndOf="@id/flowContainerD"
+            app:layout_constraintStart_toStartOf="@id/flowContainerD"
+            app:layout_constraintTop_toTopOf="@id/flowContainerD" />
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/flowRow1"
+            app:layout_constraintEnd_toStartOf="@id/tv1"
+            app:layout_constraintStart_toStartOf="@id/flowRow1"
+            app:layout_constraintTop_toTopOf="@id/flowRow1" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow1"
+            app:layout_constraintEnd_toStartOf="@id/btn2"
+            app:layout_constraintStart_toEndOf="@id/btn1"
+            app:layout_constraintTop_toTopOf="@id/flowRow1" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow1"
+            app:layout_constraintEnd_toStartOf="@id/tv2"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            app:layout_constraintTop_toTopOf="@id/flowRow1" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow1"
+            app:layout_constraintEnd_toStartOf="@id/btn3"
+            app:layout_constraintStart_toEndOf="@id/btn2"
+            app:layout_constraintTop_toTopOf="@id/flowRow1" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow1"
+            app:layout_constraintEnd_toEndOf="@id/flowRow1"
+            app:layout_constraintStart_toEndOf="@id/tv2"
+            app:layout_constraintTop_toTopOf="@id/flowRow1" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/flowRow2"
+            app:layout_constraintEnd_toEndOf="@id/flowContainerD"
+            app:layout_constraintStart_toStartOf="@id/flowContainerD"
+            app:layout_constraintTop_toBottomOf="@id/flowRow1" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flowRow2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="btn4, tv4, btn5, tv5, btn6"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow1"
+            app:layout_constraintEnd_toEndOf="@id/flowContainerD"
+            app:layout_constraintStart_toStartOf="@id/flowContainerD"
+            app:layout_constraintTop_toTopOf="@id/flowContainerD" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow2"
+            app:layout_constraintEnd_toStartOf="@id/tv4"
+            app:layout_constraintStart_toStartOf="@id/flowRow2"
+            app:layout_constraintTop_toTopOf="@id/flowRow2" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow2"
+            app:layout_constraintEnd_toStartOf="@id/btn5"
+            app:layout_constraintStart_toEndOf="@id/btn4"
+            app:layout_constraintTop_toTopOf="@id/flowRow2" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow2"
+            app:layout_constraintEnd_toStartOf="@id/tv5"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            app:layout_constraintTop_toTopOf="@id/flowRow2" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow2"
+            app:layout_constraintEnd_toStartOf="@id/btn6"
+            app:layout_constraintStart_toEndOf="@id/btn5"
+            app:layout_constraintTop_toTopOf="@id/flowRow2" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow2"
+            app:layout_constraintEnd_toEndOf="@id/flowRow2"
+            app:layout_constraintStart_toEndOf="@id/tv5"
+            app:layout_constraintTop_toTopOf="@id/flowRow2" />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/flowRow3"
+            app:layout_constraintEnd_toEndOf="@id/flowContainerD"
+            app:layout_constraintStart_toStartOf="@id/flowContainerD"
+            app:layout_constraintTop_toBottomOf="@id/flowRow2" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flowRow3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="btn7, tv7, btn8, tv8, btn9"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow1"
+            app:layout_constraintEnd_toEndOf="@id/flowContainerD"
+            app:layout_constraintStart_toStartOf="@id/flowContainerD"
+            app:layout_constraintTop_toTopOf="@id/flowContainerD" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow3"
+            app:layout_constraintEnd_toStartOf="@id/tv7"
+            app:layout_constraintStart_toStartOf="@id/flowRow3"
+            app:layout_constraintTop_toTopOf="@id/flowRow3" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow3"
+            app:layout_constraintEnd_toStartOf="@id/btn8"
+            app:layout_constraintStart_toEndOf="@id/btn7"
+            app:layout_constraintTop_toTopOf="@id/flowRow3" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow3"
+            app:layout_constraintEnd_toStartOf="@id/tv8"
+            app:layout_constraintStart_toEndOf="@id/tv7"
+            app:layout_constraintTop_toTopOf="@id/flowRow3" />
+
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow3"
+            app:layout_constraintEnd_toStartOf="@id/btn9"
+            app:layout_constraintStart_toEndOf="@id/btn8"
+            app:layout_constraintTop_toTopOf="@id/flowRow3" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/StyleBtnTicTacToe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/flowRow3"
+            app:layout_constraintEnd_toEndOf="@id/flowRow3"
+            app:layout_constraintStart_toEndOf="@id/tv8"
+            app:layout_constraintTop_toTopOf="@id/flowRow3" />
+
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flowBottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#FF1D00"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="btnExitT, btnResultT, btnMoreT"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnExitT"
+            style="@style/StyleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:text="@string/exit"
+            app:layout_constraintBottom_toBottomOf="@id/flowBottom"
+            app:layout_constraintEnd_toStartOf="@id/btnResultT"
+            app:layout_constraintStart_toStartOf="@id/flowBottom"
+            app:layout_constraintTop_toTopOf="@id/flowBottom" />
+
+        <Button
+            android:id="@+id/btnResultT"
+            style="@style/StyleBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            app:layout_constraintBottom_toBottomOf="@id/flowBottom"
+            app:layout_constraintEnd_toStartOf="@id/btnMoreT"
+            app:layout_constraintStart_toEndOf="@id/btnExitT"
+            app:layout_constraintTop_toTopOf="@id/flowBottom" />
+
+        <Button
+            android:id="@+id/btnMoreT"
+            style="@style/StyleBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="more"
+            app:layout_constraintBottom_toBottomOf="@id/flowBottom"
+            app:layout_constraintEnd_toEndOf="@id/flowBottom"
+            app:layout_constraintStart_toEndOf="@id/btnResultT"
+            app:layout_constraintTop_toTopOf="@id/flowBottom" />
+
+        <TextView
+            android:id="@+id/tvWin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:textColor="@color/yelow"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:text="win 0"
+            app:layout_constraintBottom_toTopOf="@+id/flowContainerD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPlayer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
