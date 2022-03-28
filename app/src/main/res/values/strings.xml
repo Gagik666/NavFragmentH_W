@@ -16,14 +16,15 @@
     <string name="navigation_fragment_home_work">Navigation fragment home work</string>
     <string name="e_x_i_t">E X I T</string>
     <string name="b_a_c_k">B A C K</string>
+    <string name="tic_tac_toe">TIC TAC TOE</string>
 
     <style name="Styletv" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:paddingTop">25dp</item>
-        <item name="android:paddingBottom">25dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
     </style>
 
     <style name="StyleBtn" parent="Widget.AppCompat.Button">
